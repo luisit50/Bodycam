@@ -1,0 +1,13 @@
+{
+  "camera_index": 0,
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fps": 30,
+  "output_directory": "./recordings",
+  "video_codec": "mp4v",
+  "file_format": "mp4",
+  "officer_id": "OFFICER_001",
+  "department": "Sample Police Department"
+}
