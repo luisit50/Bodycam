@@ -7,6 +7,7 @@ Tests core functionality without requiring a physical camera.
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 # Add src to path
@@ -38,9 +39,10 @@ def test_configuration():
         "department": "Test Department"
     }
     
-    config_path = "/tmp/test_config.json"
-    with open(config_path, 'w') as f:
+    # Create temporary config file
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
         json.dump(test_config, f)
+        config_path = f.name
     
     bodycam = LEOBodycam(config_path)
     assert bodycam.config['officer_id'] == 'TEST_OFFICER'

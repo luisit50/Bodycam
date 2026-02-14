@@ -9,6 +9,7 @@ import cv2
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -193,7 +194,6 @@ class LEOBodycam:
             return
         
         try:
-            import time
             start_time = time.time()
             
             print("Recording... Press Ctrl+C to stop.")
